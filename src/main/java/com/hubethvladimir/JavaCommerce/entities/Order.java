@@ -2,6 +2,7 @@ package com.hubethvladimir.JavaCommerce.entities;
 
 import java.time.Instant;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +18,10 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant moment;
+
     private OrderStatus status;
 
     @ManyToOne
@@ -64,7 +68,5 @@ public class Order {
     public void setClient(User client) {
         this.client = client;
     }
-
-
 
 }
