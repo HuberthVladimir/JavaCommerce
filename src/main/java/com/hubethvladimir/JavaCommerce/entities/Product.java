@@ -30,7 +30,7 @@ public class Product {
 
     private Double price;
 
-    private String imgUlr;
+    private String imgUrl;
 
     @ManyToMany
     @JoinTable(name = "tb_product_category", joinColumns = @JoinColumn(name = "product_id"),
@@ -43,10 +43,10 @@ public class Product {
 
     public Product() {}
 
-    public Product(String description, Long id, String imgUlr, String name, Double price) {
+    public Product(String description, Long id, String imgUrl, String name, Double price) {
         this.description = description;
         this.id = id;
-        this.imgUlr = imgUlr;
+        this.imgUrl = imgUrl;
         this.name = name;
         this.price = price;
     }
@@ -83,12 +83,12 @@ public class Product {
         this.price = price;
     }
 
-    public String getImgUlr() {
-        return imgUlr;
+    public String getimgUrl() {
+        return imgUrl;
     }
 
-    public void setImgUlr(String imgUlr) {
-        this.imgUlr = imgUlr;
+    public void setimgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public Set<Category> getCategories() {

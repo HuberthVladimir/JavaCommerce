@@ -46,8 +46,8 @@ public class Category {
         this.name = name;
     }
 
-    public void setProducts(Set<Product> products) {
-        this.products = products;
+    public Set<Product> getProducts() {
+        return products;
     }
 
     @Override
@@ -68,11 +68,9 @@ public class Category {
             return false;
         Category other = (Category) obj;
         if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        return true;
+            return other.id == null;
+        } else
+            return id.equals(other.id);
     }
 
 

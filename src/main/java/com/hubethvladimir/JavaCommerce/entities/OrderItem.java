@@ -13,7 +13,7 @@ public class OrderItem {
 
     private Integer quantity;
 
-    private Double Price;
+    private Double price;
 
     public OrderItem() {}
 
@@ -21,7 +21,7 @@ public class OrderItem {
         id.setOrder(order);
         id.setProduct(product);
         this.quantity = quantity;
-        Price = price;
+        this.price = price;
     }
 
     public Product getProduct() {
@@ -36,8 +36,8 @@ public class OrderItem {
         return id.getOrder();
     }
 
-    public void setOrder(Order product) {
-        id.setOrder(product);
+    public void setOrder(Order order) {
+        id.setOrder(order);
     }
 
     public Integer getQuantity() {
@@ -49,11 +49,11 @@ public class OrderItem {
     }
 
     public Double getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(Double price) {
-        Price = price;
+        this.price = price;
     }
 
     @Override
