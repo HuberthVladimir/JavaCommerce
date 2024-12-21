@@ -83,11 +83,11 @@ public class Product {
         this.price = price;
     }
 
-    public String getimgUrl() {
+    public String getImgUrl() {
         return imgUrl;
     }
 
-    public void setimgUrl(String imgUrl) {
+    public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
 
